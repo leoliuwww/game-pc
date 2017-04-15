@@ -46,11 +46,47 @@
 
 	//header
 	$header_height : 55px;
+	$header_color : rgba(55,61,73,0.975);
 	#top {
 		width: 100%;
 		height: $header_height;
-		background-color: red;
+		background-color: $header_color;
 		position: fixed;
+
+		.left {
+			position: absolute;
+    	top: 15px;
+  	  left: 10px;
+			span.logo {
+				float: left;
+				margin-right: 20px;
+			}
+			ul.nav {
+				display: inline-block;
+				padding: 0;
+				color: #fff;
+				li {
+					width: 150px;
+			    list-style: none;
+			    display: inline-block;
+					float: left;
+					padding: 0 1px 0 1px;
+    			cursor: pointer;
+					border-style: solid;
+					border-top-width: 1px;
+    			border-bottom-width: 1px;
+					// border: 1px solid;
+					&:first-child {
+						border-radius: 4px 0 0 4px;
+  				  border-left-width: 1px;
+					}
+					&:last-child {
+						border-radius: 0 4px 4px 0;
+  				  border-right-width: 1px;
+					}
+				}
+			}
+		}
 	}
 
 	#viewer, #main {
